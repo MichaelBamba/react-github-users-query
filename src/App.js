@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import UserCardList from "./components/UserCardList";
 import "./App.css";
+import RepoCard from "./components/repoCard";
 class App extends Component {
   state = {
     userNameInput: "",
@@ -50,6 +52,10 @@ class App extends Component {
         <div>
           <UserCardList users={userSaved} />
         </div>
+        <Router>
+          <Route path="/user" component={UserCardList} />
+          <Route path="/user/repo" component={RepoCard} />
+        </Router>
       </div>
     );
   }
