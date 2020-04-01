@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserCardList from "./components/UserCardList";
+import "./App.css";
 class App extends Component {
   state = {
     userNameInput: "",
@@ -21,7 +22,7 @@ class App extends Component {
 
     if (data.message !== "Not Found") {
       this.setState({
-        userSaved: [...this.state.userNameInput, data],
+        userSaved: [...this.state.userSaved, data],
         userName: ""
       });
     } else {

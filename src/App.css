@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+UserCardList {
+  border-radius: 0%;
+  border-width: 5px;
+}
